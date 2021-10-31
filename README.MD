@@ -1,7 +1,7 @@
 ## EscSync
 Sync any your configuration file to remote. Currently only support gist.
 
-## install
+## Install
 
 ### vim-plug
 ```vim
