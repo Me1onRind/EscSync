@@ -1,0 +1,59 @@
+*EscSync.txt*                         Editor Shell Configuration Sync
+
+
+CONTENTS                              *coc-contents*
+Introduction                          |EscSync-intruction|
+Requirements                          |EscSync-requirements|
+Options                               |EscSync-options|
+Usage                                 |EscSync-usage|
+
+==============================================================================
+CONTENTS                              *coc-contents*
+
+This plugin is manily used for sync your single file to remote. Support gist only now.
+Some software provides similar functionality to save their own configuration. You can sync
+Any configuration by this plugin, but you must set local filepath and remote filename
+mapping.
+
+==============================================================================
+Requirements                          *EscSync-requirements*
+
+- Vim compiled with Python support.
+- Python install requests module.
+
+==============================================================================
+Options                               *EscSync-options*
+
+g:esc_sync_github_token               *g:esc_sync_github_token*
+    Set your github personal access token. Remember select gist and read, write scopes. Default `""`.
+    You can also set environment variable `ESC_SYNC_GITHUB_TOKEN`
+    https://github.com/settings/tokens/new
+
+g:esc_sync_gist_id                    *esc_sync_gist_id*
+    Gist id. default `""`.
+
+g:esc_sync_debug                      *g:esc_sync_debug*
+    Control if print debug log. Logfile path `~/.esc_sync.log`. Default `0`.
+
+    e.g. let g:esc_sync_debug = 1
+
+g:esc_sync_files                      *g:esc_sync_files*
+    Local filepath and remote filename mapping. Local filepath must be absolute path. Default `{}`
+
+    e.g. let g:esc_sync_files = {
+         \ "~/.vimrc": {"remote_filename"`: ".vimrc"},
+         \ }
+
+g:esc_sync_backup
+    Backup origin local file content to /tmp/{local_filename}_{uinxtime} when pull file from remote. Default `1`.
+
+    e.g. let g:esc_sync_backup = 0
+
+==============================================================================
+Usage                                 *EscSync-usage*
+
+:PushConfig                           *PushConfig*
+    Push the file currently being edited to remote.
+
+:PullConfig
+    Pull file from remote to local.

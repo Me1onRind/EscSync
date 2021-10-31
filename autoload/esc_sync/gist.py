@@ -2,6 +2,7 @@
 import requests
 import json
 from esc_sync import logger
+import os
 
 class GistApi:
     apiPrefix = "https://api.github.com/gists"
@@ -9,7 +10,7 @@ class GistApi:
     def __init__(self, token, gistId, filename):
         session = requests.Session()
         session.headers.update({
-            "Authorization": "Bearer " + token,
+            "Authorization": "Bearer " + os.getenv("ESC_SYNC_GITHUB_TOKEN", token),
             "Accept": "application/vnd.github.v3+json",
         })
         self.session = session
