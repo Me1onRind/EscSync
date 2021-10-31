@@ -1,4 +1,4 @@
-## EscSync
+# EscSync
 Sync any your configuration file to remote. Currently only support gist.
 
 ## Install
