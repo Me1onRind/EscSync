@@ -31,7 +31,7 @@ EXPORT ESC_SYNC_GITHUB_TOKEN = "ghp_xxxxxxxxxxxxxxxxxx"
 
 
 When you push or pull, you must use Vim to open the target file.  
-Create or update ~/.vimrc.
+Sync ~/.vimrc to remote.
 
 <img src="./push.png" style="zoom:100%" />
 
