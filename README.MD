@@ -10,6 +10,8 @@ Generate github token: https://github.com/settings/tokens/new
 ```vim
 Plug 'Me1onRind/EscSync'
 ```
+## Usage
+After configuration plugin, you can use vim to open the configuration file and use ```:PushConfig``` and ```:PullConfig``` command to synchronize the configuration file.
 
 ## Example
 
