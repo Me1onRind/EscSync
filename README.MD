@@ -10,6 +10,8 @@ Generate github token: https://github.com/settings/tokens/new
 ```vim
 Plug 'Me1onRind/EscSync'
 ```
+## Usage
+After configuration plugin, you can use vim to open the configuration file and use ```:PushConfig``` and ```:PullConfig``` command to synchronize the configuration file.
 
 ## Example
 
@@ -31,7 +33,7 @@ EXPORT ESC_SYNC_GITHUB_TOKEN = "ghp_xxxxxxxxxxxxxxxxxx"
 
 
 When you push or pull, you must use Vim to open the target file.  
-Create or update ~/.vimrc.
+Sync ~/.vimrc to remote.
 
 <img src="./push.png" style="zoom:100%" />
 
